@@ -1,24 +1,22 @@
-import {Routes, Route } from "react-router-dom";
-import routes from "./confing/routes"
-//import { Login } from "./routes/Login";
-//import { Register } from "./routes/Register";
-//import {Home} from "./routes/Home"
-
+import { Routes, Route } from "react-router-dom";
+import { AuthProvider } from "./context/authContext";
+import Home from "./routes/Home"
+import Login from "./routes/Login"
+import Register from "./routes/Register"
+import ProtectedRoute from "./components/ProtectedRoute";
 
 export default function App() {
   return (
+    <AuthProvider>
       <Routes>
-        {
-          routes.map((route,index)=>(
-            <Route key={index} path={route.path} element={< route.element />}/>
-          ))
-        }
+        <Route path="/" element={
+          <ProtectedRoute>
+            <Home />
+          </ProtectedRoute>
+        } />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
       </Routes>
-  )
+    </AuthProvider>
+  );
 }
-
-//<Route path="/" element={<Home/>} />
-//<Route path="/login" element = {<Login/>} />
-//<Route path="/register" element={<Register/>} />
-
-
