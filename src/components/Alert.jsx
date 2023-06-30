@@ -2,10 +2,10 @@
 export function Alert({ message }) {
   return (
     <div
-      className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-2 text-center"
+      className="relative text-center mb-4"
       role="alert"
     >
-      <span className="sm:inline block">{message}</span>
+      <span className=" text-red-600 text-[12px] font-bold">{message}</span>
       {/* <span class="absolute top-0 bottom-0 right-0 px-4 py-3">
         <svg
           class="fill-current h-6 w-6 text-red-500"

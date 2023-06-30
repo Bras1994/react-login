@@ -1,19 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       screens: {
-        ds: { max: '480px' },
-        sm: { min: '480px', max: '760px' },
-        md: { min: '760px', max: '1024px' },
-        lg: { min: '1024px', max: '1250px' },
-        xl: {min: '1250px'}
-      }
+        ds: { max: "480px" },
+        sm: { min: "480px", max: "760px" },
+        md: { min: "760px", max: "1024px" },
+        lg: { min: "1024px", max: "1250px" },
+        xl: { min: "1250px" },
+      },
+      fontFamily: { heebo: "Heebo" },
+      colors: { Line: "#999999", Check: "#61e25e", Background: "89779b" },
     },
   },
   plugins: [],
-}
+};
