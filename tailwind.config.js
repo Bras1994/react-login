@@ -10,7 +10,6 @@ export default {
         lg: { min: "1024px", max: "1250px" },
         xl: { min: "1250px" },
       },
-      fontFamily: { heebo: "Heebo" },
       colors: { Line: "#999999", Check: "#61e25e", Background: "89779b" },
     },
   },

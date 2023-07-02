@@ -2,7 +2,7 @@
 export function Alert({ message }) {
   return (
     <div
-      className="relative text-center mb-4"
+      className="relative text-center"
       role="alert"
     >
       <span className=" text-red-600 text-[12px] font-bold">{message}</span>
